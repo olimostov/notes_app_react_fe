@@ -8,7 +8,8 @@ const Nav = props => {
   return (
     <div className='container'>
       <header>
-        <h1>Notify</h1>
+        <h1>Memo</h1>
+        <p>The notes keeping app</p>
         <nav>
           <Link to='/'>Home</Link>
           {state.token ? null : (

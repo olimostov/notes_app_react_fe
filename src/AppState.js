@@ -8,7 +8,18 @@ const initialState = {
   url: 'http://localhost:8080/',
   token: null,
   username: null,
-  email: null
+  email: null,
+  notes: null,
+  new: {
+    id: 0,
+    title: '',
+    body: ''
+  },
+  edit: {
+    id: 0,
+    title: '',
+    body: ''
+  }
 };
 
 // ----------------------
@@ -25,6 +36,10 @@ const reducer = (state, action) => {
     case 'logout':
       newState = { ...state, token: null, username: null, email: null };
       window.localStorage.removeItem('auth');
+      return newState;
+      break;
+    case 'getNotes':
+      newState = { ...state, notes: action.payload };
       return newState;
       break;
     default:
