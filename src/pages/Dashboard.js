@@ -37,6 +37,28 @@ const Dashboard = props => {
           <div className='note' key={note.id}>
             <h3>{note.title}</h3>
             <p>{note.body}</p>
+            <button
+              onClick={() => {
+                dispatch({ type: 'select', payload: note });
+                props.history.push('/dashboard/edit');
+              }}
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => {
+                fetch(`${url}/notes/${note.id}`, {
+                  method: 'DELETE',
+                  headers: {
+                    Authorization: `bearer ${token}`
+                  }
+                }).then(() => {
+                  getNotes();
+                });
+              }}
+            >
+              Delete
+            </button>
           </div>
         ))}
       </ul>

@@ -11,9 +11,9 @@ const Nav = props => {
         <h1>Memo</h1>
         <p>The notes keeping app</p>
         <nav>
-          <Link to='/'>Home</Link>
           {state.token ? null : (
             <>
+              <Link to='/'>Home</Link>
               <Link to='/auth/signup'>Sign Up</Link>
               <Link to='/auth/login'>Log In</Link>
             </>
