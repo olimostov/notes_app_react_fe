@@ -31,7 +31,7 @@ const Form = props => {
   };
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log('formData :>> ', JSON.stringify(formData));
+    // console.log('formData :>> ', JSON.stringify(formData));
   };
 
   const handleSubmit = e => {
