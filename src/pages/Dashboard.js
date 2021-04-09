@@ -33,7 +33,7 @@ const Dashboard = props => {
         render={rp => <Form {...rp} getNotes={getNotes} />}
       />
       <ul>
-        {state.notes.map(note => (
+        {notes.map(note => (
           <div className='note' key={note.id}>
             <h3>{note.title}</h3>
             <p>{note.body}</p>

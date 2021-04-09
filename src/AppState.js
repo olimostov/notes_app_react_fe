@@ -4,8 +4,8 @@ import React, { useContext, useReducer } from 'react';
 // INITIAL STATE
 // ----------------------
 const initialState = {
-  // url: 'http://omnotesreactrailsbackend.herokuapp.com', // change to https: on a prod
-  url: 'http://localhost:8080/',
+  url: 'http://omnotesreactrailsbackend.herokuapp.com', // change to https: on a prod
+  // url: 'http://localhost:8080/',
   token: null,
   username: null,
   email: null,
